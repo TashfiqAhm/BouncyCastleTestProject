@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33712.159
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EncryptionTestProject", "EncryptionTestProject.csproj", "{5F5909B6-549D-4CFF-8287-11A4C2AD1521}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Service", "Service", "{05AA16EC-DF53-4C39-A9CF-E8DD02C4B0BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncryptionService", "..\Services\BouncyCastleService.cs\EncryptionService\EncryptionService.csproj", "{38C39A54-CDC1-45A3-B325-F84535B703DD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5F5909B6-549D-4CFF-8287-11A4C2AD1521}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F5909B6-549D-4CFF-8287-11A4C2AD1521}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F5909B6-549D-4CFF-8287-11A4C2AD1521}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F5909B6-549D-4CFF-8287-11A4C2AD1521}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38C39A54-CDC1-45A3-B325-F84535B703DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38C39A54-CDC1-45A3-B325-F84535B703DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38C39A54-CDC1-45A3-B325-F84535B703DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38C39A54-CDC1-45A3-B325-F84535B703DD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{38C39A54-CDC1-45A3-B325-F84535B703DD} = {05AA16EC-DF53-4C39-A9CF-E8DD02C4B0BF}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D49491C3-4F44-4F0B-B088-68F7829B40D2}
+	EndGlobalSection
+EndGlobal

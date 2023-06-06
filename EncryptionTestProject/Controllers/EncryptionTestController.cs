@@ -7,19 +7,24 @@ namespace EncryptionTestProject.Controllers
     public class EncryptionTestController : ControllerBase
     {
         private readonly IBouncyCastleService _bouncyCastleService;
+        private readonly IBouncyCastleForLargeFileService _bouncyCastleForLargeFileService;
+        private readonly IPgpCoreService _pgpCoreService;
 
-        public EncryptionTestController(IBouncyCastleService bouncyCastleService)
+        public EncryptionTestController(IBouncyCastleService bouncyCastleService, 
+            IPgpCoreService pgpCoreService,
+            IBouncyCastleForLargeFileService bouncyCastleForLargeFileService)
         {
             _bouncyCastleService = bouncyCastleService;
+            _bouncyCastleForLargeFileService = bouncyCastleForLargeFileService;
+            _pgpCoreService = pgpCoreService;
         }
 
-        // GET: /api/Templates/id/Shared
-        [HttpGet("BouncyCastle")]
+        [HttpGet("EncryptionTest")]
         public async Task<ActionResult<string>> testEncryption()
         {
-            var mainData = "hello qwerty";
-            var signData = "data to check sign";
-            var lastData = _bouncyCastleService.TestEncryption(mainData, signData);
+            //var lastData = await _bouncyCastleForLargeFileService.TestEncryption();
+            var lastData = await _bouncyCastleService.TestEncryption();
+            //var lastData = await _pgpCoreService.TestEncryption();
             return Ok(lastData);
         }
     }
